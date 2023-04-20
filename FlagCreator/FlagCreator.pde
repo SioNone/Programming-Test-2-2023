@@ -8,6 +8,8 @@ ArrayList<Flag> flags = new ArrayList<Flag>();
 
 void setup() {
   size(1000, 1000);
+  colorMode(HSB);
+  noStroke();
   generateFlags();
 }
 
