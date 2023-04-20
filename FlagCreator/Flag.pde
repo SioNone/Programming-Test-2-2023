@@ -17,7 +17,7 @@ class Flag {
       popMatrix();
     }
     
-    for (int i = 4; i > 1; i--) {
+    for (int i = 4; i > 0; i--) {
       pushMatrix();
       noStroke();
       fill(40, 255, 255 - (60 *  i));
@@ -34,6 +34,12 @@ class Flag {
   }
 
   void update() {
+    
+    // If flag moves off screen move it to the other side
+    if (flagPosition.x > width) {
+      flagPosition.x = 0 - flagWidth;
+    }
+    
     render();
   }
 }
