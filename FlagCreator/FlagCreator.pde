@@ -1,4 +1,3 @@
-// Student Name: Luke Doyle
 // Student Number: C22775241
 
 // Variables for flag position and movement
@@ -20,13 +19,13 @@ void setup() {
   moveSpeed = new PVector(1, 0);
   
   // Sin Wave Variables
-  maxValue = 200;
-  interval = 300;
+  maxValue = 300;
+  interval = 100;
   warpSpeed = 0.02;
   widthValue = 10;
   heightValue = 6;
-  xIncrement = (TWO_PI / interval) * widthValue;
-  yIncrement = (TWO_PI / interval) * heightValue;
+  xIncrement = (PI / interval) * widthValue;
+  yIncrement = (PI / interval) * heightValue;
 }
 
 void draw() {
@@ -60,7 +59,7 @@ void draw() {
 void generateFlags() {
   for (int i = 0; i < 9; i++) {
     flagPosition = new PVector(random(0, width), random(0, height));
-    Flag flag = new Flag(flagPosition, random(100, 250), random(50, 150));
+    Flag flag = new Flag(flagPosition, random(100, 300), random(50, 150));
     flags.add(flag);
   }
 }

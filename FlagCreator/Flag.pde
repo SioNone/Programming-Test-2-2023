@@ -21,10 +21,14 @@ class Flag {
       pushMatrix();
       noStroke();
       fill(40, 255, 255 - (60 *  i));
+      
       if (i == 2) {
         fill(350, 100, 255);
+      } else if (i == 1) {
+        fill(40, 200, 255);
       }
-      triangle(flagPosition.x, flagPosition.y, flagPosition.x + (flagWidth / 8 * i), flagPosition.y + flagHeight / 2, flagPosition.x, flagPosition.y + flagHeight);
+      
+      triangle(flagPosition.x, flagPosition.y + (flagHeight / 10 * (abs(4 - i))), flagPosition.x + (flagWidth / 7 * i), flagPosition.y + flagHeight / 2, flagPosition.x, flagPosition.y + flagHeight - (flagHeight / 10 * (abs(4 - i))));
       popMatrix();
     }
     
@@ -32,7 +36,7 @@ class Flag {
     noFill();
     stroke(200, 255, 255);
     strokeWeight(2);
-    circle(flagPosition.x + (flagWidth / 12), flagPosition.y + (flagHeight / 2), flagWidth / 8);
+    circle(flagPosition.x + (flagWidth / 14), flagPosition.y + (flagHeight / 2), min(flagWidth, flagHeight) / 12);
     popMatrix();
   }
 
