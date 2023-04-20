@@ -21,8 +21,8 @@ void draw() {
 
 void generateFlags() {
   for (int i = 0; i < 9; i++) {
-    flagPosition = new PVector(random(0, width), random(0, height))
-    Flag flag = new Flag(flagPosition, random(0, 100), random(0, 100));
+    flagPosition = new PVector(random(0, width), random(0, height));
+    Flag flag = new Flag(flagPosition, random(100, 250), random(50, 150));
     flags.add(flag);
   }
 }
